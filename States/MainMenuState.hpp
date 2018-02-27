@@ -2,8 +2,8 @@
 #define MAINMENUSTATE_H
 
 #include  <SFML/Graphics.hpp>
-#include "State.hpp"
-#include "Game.hpp"
+#include "../Base/State.hpp"
+#include "../Game.hpp"
 
 class MainMenuState : public State
 {

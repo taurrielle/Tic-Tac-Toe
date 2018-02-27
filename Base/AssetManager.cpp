@@ -1,5 +1,4 @@
 #include "AssetManager.hpp"
-#include <iostream>
 
 void AssetManager::LoadTexture(std::string name, std::string fileName)
 {
@@ -7,9 +6,7 @@ void AssetManager::LoadTexture(std::string name, std::string fileName)
 
   if(tex.loadFromFile(fileName))
   {
-    // this->_textures.at(name) = tex;
     this->_textures.insert(std::make_pair(name, tex));
-
   }
 }
 
@@ -20,15 +17,15 @@ sf::Texture &AssetManager::GetTexture(std::string name)
 
 void AssetManager::LoadFont(std::string name, std::string fileName)
 {
-  // sf::Font font;
+  sf::Font font;
 
-  // if(font.loadFromFile(fileName))
-  // {
-  //   this->_fonts.at(name) = font;
-  // }
+  if(font.loadFromFile(fileName))
+  {
+    this->_fonts.at(name) = font;
+  }
 }
 
 sf::Font &AssetManager::GetFont(std::string name)
 {
-  // return this->_fonts.at(name);
+  return this->_fonts.at(name);
 }

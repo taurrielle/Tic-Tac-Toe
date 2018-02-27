@@ -1,8 +1,7 @@
-#ifndef AssetManager_H
-#define AssetManager_H
+#ifndef ASSETMANAGER_H
+#define ASSETMANAGER_H
 
 #include <map>
-
 #include <SFML/Graphics.hpp>
 
 class AssetManager

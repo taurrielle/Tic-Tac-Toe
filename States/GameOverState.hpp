@@ -1,9 +1,9 @@
 #ifndef GAMEOVERSTATE_H
 #define GAMEOVERSTATE_H
 
-#include  <SFML/Graphics.hpp>
-#include "State.hpp"
-#include "Game.hpp"
+#include <SFML/Graphics.hpp>
+#include "../Base/State.hpp"
+#include "../Game.hpp"
 
 class GameOverState : public State
 {

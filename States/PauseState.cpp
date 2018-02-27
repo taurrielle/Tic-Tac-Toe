@@ -1,9 +1,8 @@
 #include "PauseState.hpp"
-#include "DEFINITIONS.hpp"
+#include "../DEFINITIONS.hpp"
 #include "GameState.hpp"
 #include "MainMenuState.hpp"
 #include <sstream>
-#include <iostream>
 
 PauseState::PauseState(GameDataRef data) : _data(data)
 {
@@ -12,7 +11,7 @@ PauseState::PauseState(GameDataRef data) : _data(data)
 
 void PauseState::Init()
 {
-  this->_data->assets.LoadTexture("PauseBackground", PAUSE_BACKGROUND_FILEPATH);
+  this->_data->assets.LoadTexture("PauseBackground", PAUSE_BACKGROUND);
   this->_data->assets.LoadTexture("ResumeButton", RESUME_BUTTON);
   this->_data->assets.LoadTexture("HomeButton", HOME_BUTTON);
 

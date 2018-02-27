@@ -1,6 +1,6 @@
 #include "MainMenuState.hpp"
 #include <sstream>
-#include "DEFINITIONS.hpp"
+#include "../DEFINITIONS.hpp"
 #include "GameState.hpp"
 #include <iostream>
 
@@ -11,10 +11,10 @@ MainMenuState::MainMenuState(GameDataRef data) : _data(data)
 
 void MainMenuState::Init()
 {
-  this->_data->assets.LoadTexture("Background", MAIN_MENU_BACKGROUND_FILEPATH);
+  this->_data->assets.LoadTexture("Background", MAIN_MENU_BACKGROUND);
   this->_data->assets.LoadTexture("PlayButton", MAIN_MENU_PLAY_BUTTON);
   this->_data->assets.LoadTexture("PlayButtonOuter", MAIN_MENU_PLAY_BUTTON_OUTER);
-  this->_data->assets.LoadTexture("GameTitle", MAIN_MENU_TITLE_PATH);
+  this->_data->assets.LoadTexture("GameTitle", MAIN_MENU_TITLE);
 
   this->_background.setTexture(this->_data->assets.GetTexture("Background"));
   this->_playButton.setTexture(this->_data->assets.GetTexture("PlayButton"));

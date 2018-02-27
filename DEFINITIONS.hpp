@@ -2,16 +2,15 @@
 #define _DEFINITIONS_H
 
 #define SCREEN_WIDTH 768
-#define SCREEN_HEIGHT 1136
+#define SCREEN_HEIGHT 715
 
-#define SPLASH_STATE_SHOW_TIME 3
+#define SPLASH_STATE_SHOW_TIME 1
 
-#define SPLASH_SCENE_BACKGROUND_FILEPATH "Resources/res/Splash_Background.png"
-#define GAME_BACKGROUND_FILEPATH "Resources/res/Main_Menu_Background.png"
-#define PAUSE_BACKGROUND_FILEPATH "Resources/res/Main_Menu_Background.png"
-#define MAIN_MENU_BACKGROUND_FILEPATH "Resources/res/Main_Menu_Background.png"
+#define GAME_BACKGROUND "Resources/res/Main_Menu_Background.png"
+#define PAUSE_BACKGROUND "Resources/res/Main_Menu_Background.png"
+#define MAIN_MENU_BACKGROUND "Resources/res/Main_Menu_Background.png"
 
-#define MAIN_MENU_TITLE_PATH "Resources/res/Game_Title.png"
+#define MAIN_MENU_TITLE "Resources/res/Game_Title.png"
 
 #define MAIN_MENU_PLAY_BUTTON "Resources/res/Play_Button.png"
 #define MAIN_MENU_PLAY_BUTTON_OUTER "Resources/res/Play_Button_Outer.png"
@@ -20,12 +19,12 @@
 #define HOME_BUTTON "Resources/res/Home_Button.png"
 #define RETRY_BUTTON "Resources/res/Retry_Button.png"
 
-#define X_PIECE_FILEPATH "Resources/res/X.png"
-#define O_PIECE_FILEPATH "Resources/res/O.png"
-#define X_WINNING_PIECE_FILEPATH "Resources/res/X_Win.png"
-#define O_WINNING_PIECE_FILEPATH "Resources/res/O_Win.png"
+#define X_PIECE_SPRITE "Resources/res/X.png"
+#define O_PIECE_SPRITE "Resources/res/O.png"
+#define X_WINNING_PIECE "Resources/res/X_Win.png"
+#define O_WINNING_PIECE "Resources/res/O_Win.png"
 
-#define GRID_SPRITE_FILEPATH "Resources/res/Grid.png"
+#define GRID_SPRITE "Resources/res/Grid.png"
 
 #define X_PIECE 8
 #define O_PIECE 0

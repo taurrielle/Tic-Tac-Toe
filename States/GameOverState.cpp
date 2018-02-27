@@ -1,9 +1,8 @@
 #include "GameOverState.hpp"
-#include "DEFINITIONS.hpp"
+#include "../DEFINITIONS.hpp"
 #include "GameState.hpp"
 #include "MainMenuState.hpp"
 #include <sstream>
-#include <iostream>
 
 GameOverState::GameOverState(GameDataRef data) : _data(data)
 {

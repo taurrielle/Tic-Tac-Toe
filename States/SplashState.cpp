@@ -2,7 +2,7 @@
 #include <iostream>
 
 #include "SplashState.hpp"
-#include "DEFINITIONS.hpp"
+#include "../DEFINITIONS.hpp"
 #include "MainMenuState.hpp"
 
 SplashState::SplashState(GameDataRef data) : _data(data)
@@ -12,8 +12,7 @@ SplashState::SplashState(GameDataRef data) : _data(data)
 
 void SplashState::Init()
 {
-  this->_data->assets.LoadTexture("SplashState_Background", SPLASH_SCENE_BACKGROUND_FILEPATH);
-  _background.setTexture(this->_data->assets.GetTexture("SplashState_Background"));
+
 }
 
 void SplashState::HandleInput()
@@ -39,7 +38,8 @@ void SplashState::Update(float dt)
 
 void SplashState::Draw(float dt)
 {
-  this->_data->window.clear(sf::Color::Red);
+  sf::Color grey(35, 34, 34);
+  this->_data->window.clear(grey);
   this->_data->window.draw(this->_background);
   this->_data->window.display();
 }

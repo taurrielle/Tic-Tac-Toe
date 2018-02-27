@@ -1,11 +1,9 @@
 #include <sstream>
 #include "GameState.hpp"
 #include "MainMenuState.hpp"
-#include "DEFINITIONS.hpp"
+#include "../DEFINITIONS.hpp"
 #include "PauseState.hpp"
 #include "GameOverState.hpp"
-
-#include <iostream>
 
 GameState::GameState(GameDataRef data) : _data(data)
 {
@@ -20,11 +18,11 @@ void GameState::Init()
   this->ai = new AI(turn, this->_data);
 
   this->_data->assets.LoadTexture("Pause Button", PAUSE_BUTTON);
-  this->_data->assets.LoadTexture("Grid Sprite", GRID_SPRITE_FILEPATH);
-  this->_data->assets.LoadTexture("X Piece", X_PIECE_FILEPATH);
-  this->_data->assets.LoadTexture("O Piece", O_PIECE_FILEPATH);
-  this->_data->assets.LoadTexture("X Winning Piece", X_WINNING_PIECE_FILEPATH);
-  this->_data->assets.LoadTexture("O Winning Piece", O_WINNING_PIECE_FILEPATH);
+  this->_data->assets.LoadTexture("Grid Sprite", GRID_SPRITE);
+  this->_data->assets.LoadTexture("X Piece", X_PIECE_SPRITE);
+  this->_data->assets.LoadTexture("O Piece", O_PIECE_SPRITE);
+  this->_data->assets.LoadTexture("X Winning Piece", X_WINNING_PIECE);
+  this->_data->assets.LoadTexture("O Winning Piece", O_WINNING_PIECE);
 
   _background.setTexture(this->_data->assets.GetTexture("Background"));
   _pauseButton.setTexture(this->_data->assets.GetTexture("Pause Button"));
@@ -86,9 +84,7 @@ void GameState::Draw(float dt)
   this->_data->window.clear(sf::Color::Red);
 
   this->_data->window.draw( this->_background );
-
   this->_data->window.draw( this->_pauseButton );
-
   this->_data->window.draw( this->_gridSprite );
 
   for (int x = 0; x < 3; x++)
@@ -110,7 +106,7 @@ void GameState::InitGridPieces()
   {
     for (int y = 0; y < 3; y++)
     {
-      _gridPieces[x][y].setTexture(this->_data->assets.GetTexture("X Piece"));
+      _gridPieces[x][y].setTexture(this->_data->assets.GetTexture("O Piece"));
       _gridPieces[x][y].setPosition(_gridSprite.getPosition().x + (tempSpriteSize.x * x) - 7, _gridSprite.getPosition().y + (tempSpriteSize.y * y) - 7);
       _gridPieces[x][y].setColor(sf::Color(255, 255, 255, 0));
     }
@@ -124,8 +120,6 @@ void GameState::CheckAndPlacePiece()
   sf::Vector2f gapOutsideOfGrid = sf::Vector2f((SCREEN_WIDTH - gridSize.width) / 2, (SCREEN_HEIGHT - gridSize.height) / 2);
 
   sf::Vector2f gridLocalTouchPos = sf::Vector2f(touchPoint.x - gapOutsideOfGrid.x, touchPoint.y - gapOutsideOfGrid.y);
-
-  //std::cout << gridLocalTouchPos.x << ", " << gridLocalTouchPos.y << std::endl;
 
   sf::Vector2f gridSectionSize = sf::Vector2f(gridSize.width / 3, gridSize.height / 3);
 
@@ -226,8 +220,6 @@ void GameState::CheckHasPlayerWon(int player)
     this->_clock.restart();
 
   }
-
-  std::cout << gameState << std::endl;
 }
 
 void GameState::Check3PiecesForMatch(int x1, int y1, int x2, int y2, int x3, int y3, int pieceToCheck)

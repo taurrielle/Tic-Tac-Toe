@@ -1,9 +1,9 @@
 #ifndef PAUSESTATE_H
 #define PAUSESTATE_H
 
-#include  <SFML/Graphics.hpp>
-#include "State.hpp"
-#include "Game.hpp"
+#include <SFML/Graphics.hpp>
+#include "../Base/State.hpp"
+#include "../Game.hpp"
 
 class PauseState : public State
 {

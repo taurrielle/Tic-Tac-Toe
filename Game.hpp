@@ -1,14 +1,12 @@
 #ifndef GAME_H
 #define GAME_H
 
-// #pragma once
-
 #include <memory>
 #include <string>
 #include <SFML/Graphics.hpp>
-#include "StateMachine.hpp"
-#include "AssetManager.hpp"
-#include "InputManager.hpp"
+#include "Base/StateMachine.hpp"
+#include "Base/AssetManager.hpp"
+#include "Base/InputManager.hpp"
 
 struct GameData
 {

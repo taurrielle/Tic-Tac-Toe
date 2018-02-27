@@ -1,10 +1,10 @@
 #ifndef GAMESTATE_H
 #define GAMESTATE_H
 
-#include  <SFML/Graphics.hpp>
-#include "State.hpp"
-#include "Game.hpp"
-#include "AI.hpp"
+#include <SFML/Graphics.hpp>
+#include "../Base/State.hpp"
+#include "../Game.hpp"
+#include "../AI.hpp"
 
 class GameState : public State
 {

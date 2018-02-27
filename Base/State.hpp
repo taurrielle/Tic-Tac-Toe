@@ -1,7 +1,5 @@
-#ifndef State_h
-#define State_h
-
-// #pragma once
+#ifndef STATE_H
+#define STATE_H
 
 class State
 {
